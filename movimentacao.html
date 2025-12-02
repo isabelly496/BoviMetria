@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movimentação - Bovimetria</title>
+    <link rel="stylesheet" href="movimentacao.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Barra superior -->
+    <header class="top-bar">
+        <img src="logo.png" class="logo">
+        <nav>
+            <button class="top-btn">Início</button>
+            <button class="top-btn">Contato</button>
+            <button class="top-btn" onclick="window.location.href='index.html'">Pesquisa</button>
+            <button class="section">Movimentação</button>
+        </nav>
+    </header>
+
+    <!-- Conteúdo da página -->
+    <main class="conteudo">
+
+        <!-- Botão -->
+        <button class="btn-cruzamento" onclick="mostrarModal()">
+            Separar para Cruzamento
+        </button>
+
+        <!-- Gráfico -->
+    <div class="grafico-container">
+
+    <h2 class="titulo-grafico">Nível de Agitação das Vacas</h2>
+
+    <div class="barras">
+
+        <div class="barra">
+            <div class="valor alta"></div>
+            <span class="nome">5788</span>
+        </div>
+
+        <div class="barra">
+            <div class="valor media"></div>
+            <span class="nome">4109</span>
+        </div>
+
+        <div class="barra">
+            <div class="valor baixa"></div>
+            <span class="nome">3218</span>
+        </div>
+
+        <div class="barra">
+            <div class="valor alta"></div>
+            <span class="nome">5579</span>
+        </div>
+
+        <div class="barra">
+            <div class="valor baixa"></div>
+            <span class="nome">2678</span>
+        </div>
+
+    </div>
+
+    <div class="legendas">
+        <div><span class="cor alta"></span> Alta agitação</div>
+        <div><span class="cor media"></span> Agitação moderada</div>
+        <div><span class="cor baixa"></span> Baixa agitação</div>
+    </div>
+
+</div>
+
+
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <h2>Separar para Cruzamento</h2>
+
+            <div class="lista">
+                <label><input type="checkbox" checked> 6421</label>
+                <label><input type="checkbox" checked> 3218</label>
+                <label><input type="checkbox" checked> 7590</label>
+                <label><input type="checkbox"> 9902</label>
+                <label><input type="checkbox"> 8624</label>
+                <label><input type="checkbox"> 5539</label>
+            </div>
+
+           <button class="btn-concluir" onclick="irParaRelatorio()">Concluir</button>
+        </div>
+    </div>
+
+    <!-- Barra inferior -->
+    <footer class="bottom-bar">
+        <i class="fa-solid fa-house"></i>
+        <i class="fa-solid fa-bell"></i>
+        <i class="fa-solid fa-calculator"></i>
+        <i class="fa-solid fa-cow"></i>
+        <i class="fa-solid fa-table"></i>
+        <i class="fa-solid fa-seedling"></i>
+         <button class="icon-btn" onclick="window.location.href='controlecio.html'">
+    <i class="fa-solid fa-clipboard-list"></i>
+</button>
+    </footer>
+
+
+    <!-- SCRIPT DO MODAL -->
+        <script>
+    function mostrarModal() {
+        document.getElementById("modal").style.display = "flex";
+    }
+    function irParaRelatorio() {
+        window.location.href = "relatorio.html";
+    }
+</script>
+
+    </script>
+
+
+    <!-- SCRIPT DO GRÁFICO -->
+    <script>
+        const canvas = document.getElementById("graficoCruza");
+        const ctx = canvas.getContext("2d");
+
+        canvas.width = window.innerWidth - 40;
+        canvas.height = 380;
+
+        const pontos = [
+            { id: "5788", x: 280, y: 80, cor: "red" },
+            { id: "5579", x: 340, y: 95, cor: "red" },
+            { id: "8961", x: 410, y: 110, cor: "red" },
+
+            { id: "3902", x: 280, y: 220, cor: "green" },
+            { id: "1288", x: 330, y: 240, cor: "green" },
+            { id: "4109", x: 370, y: 260, cor: "green" },
+            { id: "2678", x: 430, y: 245, cor: "green" }
+        ];
+
+        ctx.fillStyle = "#e9ece9";
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+        ctx.strokeStyle = "#888";
+        ctx.beginPath();
+        ctx.moveTo(0, canvas.height / 2);
+        ctx.lineTo(canvas.width, canvas.height / 2);
+        ctx.stroke();
+
+        ctx.fillStyle = "#000";
+        ctx.font = "16px Arial";
+        ctx.fillText("Alta", 10, 20);
+        ctx.fillText("Baixa", 10, canvas.height - 10);
+
+        const cores = ["#b30000", "#ff4d4d", "#ff9999", "#ffcc00", "#99cc66", "#2d6a26"];
+        let offset = 70;
+
+        cores.forEach(c => {
+            ctx.fillStyle = c;
+            ctx.fillRect(10, offset, 20, 22);
+            offset += 22;
+        });
+
+        pontos.forEach(p => {
+            ctx.fillStyle = p.cor;
+            ctx.beginPath();
+            ctx.arc(p.x, p.y, 9, 0, Math.PI * 2);
+            ctx.fill();
+
+            ctx.fillStyle = "#000";
+            ctx.font = "13px Arial";
+            ctx.fillText(p.id, p.x - 15, p.y - 12);
+        });
+    </script>
+
+</body>
+</html>

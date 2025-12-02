@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle do Cio</title>
+    <link rel="stylesheet" href="controlecio.css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- TOPO -->
+    <header class="top-bar">
+        <button class="top-btn">Início</button>
+        <button class="top-btn">Contato</button>
+        <button class="top-btn" onclick="window.location.href='index.html'">Pesquisa</button>
+         <button class="top-btn" onclick="window.location.href='movimentacao.html'">
+    Movimentação
+</button>
+    </header>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main class="container">
+
+        <!-- CALENDÁRIO -->
+        <div class="calendar-box">
+            <h3>MAIO</h3>
+
+            <table class="calendar">
+                <tr>
+                    <th>Dom</th><th>Seg</th><th>Ter</th><th>Qua</th><th>Qui</th><th>Sex</th><th>Sáb</th>
+                </tr>
+
+                <tr><td></td><td></td><td></td><td>1</td><td>2</td><td>3</td><td></td></tr>
+                <tr><td>4</td><td>5</td><td>6</td><td class="selected">7</td><td>8</td><td>9</td><td>10</td></tr>
+                <tr><td>11</td><td>12</td><td>13</td><td>14</td><td>15</td><td>16</td><td>17</td></tr>
+                <tr><td>18</td><td>19</td><td>20</td><td>21</td><td>22</td><td>23</td><td>24</td></tr>
+                <tr><td>25</td><td>26</td><td>27</td><td>28</td><td>29</td><td>30</td><td>31</td></tr>
+            </table>
+        </div>
+
+        <!-- DIVISÃO -->
+        <div class="divider"></div>
+
+        <!-- CÍRCULO DE INFORMAÇÃO -->
+        <div class="info-circle">
+            <p class="dia">Dia</p>
+            <p class="numero">7</p>
+            <p class="status">A vaca está ovulando</p>
+
+            <button class="btn-cio" onclick="window.location.href='pagina-cio.html'">
+    Controle do Cio
+</button>
+
+        </div>
+
+    </main>
+
+    <!-- MENU INFERIOR -->
+    <footer class="bottom-bar">
+        <button class="icon-btn"><i class="fa-solid fa-house"></i></button>
+        <button class="icon-btn"><i class="fa-solid fa-phone"></i></button>
+        <button class="icon-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+        <button class="icon-btn"><i class="fa-solid fa-cow"></i></button>
+
+        <!-- permanece selecionado -->
+        <button class="icon-btn active">
+            <i class="fa-solid fa-clipboard-list"></i>
+        </button>
+
+        <button class="icon-btn"><i class="fa-solid fa-tractor"></i></button>
+    </footer>
+
+</body>
+</html>

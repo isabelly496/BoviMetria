@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BoviMetria – Notificações</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-green': '#4CAF50', 
+                        'header-bg': '#567c46', // Cor do cabeçalho
+                        'body-bg': '#d1d9d1',   // Cor do fundo do body
+                        'container-bg': '#f5f6e8', // Cor do container principal
+                        'alert-bg': '#d7f7c7', // Cor de fundo do alerta
+                        'alert-border': '#3b7f23', // Cor da borda do alerta
+                        'bottombar-bg': '#123a12', // Cor da barra inferior
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+        /* Garante que o conteúdo não seja escondido pelo rodapé fixo */
+        body {
+            padding-bottom: 90px; /* Margem maior que a altura do rodapé (70px) */
+        }
+    </style>
+</head>
+<body class="bg-body-bg font-sans min-h-screen">
+
+    <div class="container bg-container-bg w-[92%] mx-auto p-5 rounded-xl mt-5 shadow-lg">
+
+        <div class="titlebox bg-header-bg py-3 px-5 inline-block rounded-md text-white text-xl font-semibold mb-5">
+            NOTIFICAÇÕES:
+        </div>
+
+        <div class="alert bg-alert-bg border-l-6 border-alert-border p-3 rounded-md text-base flex justify-between items-center mb-5">
+            <span class="font-semibold text-alert-border">A vaca “#227456” está agitada!</span>
+            <i class="fas fa-exclamation-triangle text-2xl text-red-600 ml-2"></i>
+        </div>
+
+        <div class="card bg-white p-5 rounded-xl mb-5 shadow-md">
+            É hora de aplicar o medicamento da vaca “#454864”. Ela está localizada no curral “2”, e seu comportamento está calmo.
+            <a href="#" class="info-link block mt-2 text-primary-green font-semibold cursor-pointer hover:text-green-700 transition duration-150">Informações do animal</a>
+            <div class="date text-right text-gray-600 text-sm mt-2">08/05/2025</div>
+        </div>
+
+        <div class="card bg-white p-5 rounded-xl mb-5 shadow-md">
+            Chegou o dia do parto da vaca “#124208”, ela está localizada no curral “1”, e seu comportamento está calmo.
+            <a href="#" class="info-link block mt-2 text-primary-green font-semibold cursor-pointer hover:text-green-700 transition duration-150">Informações do animal</a>
+            <div class="date text-right text-gray-600 text-sm mt-2">07/05/2025</div>
+        </div>
+
+        <div class="card bg-white p-5 rounded-xl mb-5 shadow-md">
+            A vaca “#786532” obteve um aumento de 1,5l de leite em sua ordenha, o fluxo está 24% maior que o habitual. Sua saúde está estável e seu comportamento calmo.
+            <a href="#" class="info-link block mt-2 text-primary-green font-semibold cursor-pointer hover:text-green-700 transition duration-150">Informações do animal</a>
+            <div class="date text-right text-gray-600 text-sm mt-2">07/05/2025</div>
+        </div>
+
+    </div>
+
+    <img class="logo fixed bottom-[85px] right-5 w-[75px] z-20" src="logo.png" alt="Logo BoviMetria">
+
+    <div class="bottombar fixed bottom-0 left-0 right-0 h-[70px] bg-bottombar-bg shadow-2xl z-50 flex justify-around items-center">
+        
+        <a href="dashboard.html" class="flex flex-col items-center text-white/80 hover:text-white transition duration-150">
+            <i class="fas fa-home text-2xl"></i>
+        </a>
+        
+        <a href="notificacoes.html" class="flex flex-col items-center text-primary-green transition duration-150">
+            <i class="fas fa-bell text-2xl"></i>
+        </a>
+        
+        <a href="relatorios.html" class="flex flex-col items-center text-white/80 hover:text-white transition duration-150">
+            <i class="fas fa-th text-2xl"></i>
+        </a>
+        
+        <a href="settings.html" class="flex flex-col items-center text-white/80 hover:text-white transition duration-150">
+            <i class="fas fa-cog text-2xl"></i>
+        </a>
+    </div>
+
+</body>
+</html>

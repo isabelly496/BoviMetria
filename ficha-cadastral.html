@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dados - Ficha Cadastral de Bovino</title>
+    <link rel="stylesheet" href="ficha-cadastral.css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="top-bar">
+        <a href="pagina-cio.html" class="back-btn"><i class="fa-solid fa-arrow-left"></i></a>
+        <h2>Dados - Ficha Cadastral de Bovino</h2>
+        <div class="header-actions">
+            <button class="action-btn exclude-btn" id="btnExcluir">Excluir</button> 
+            <button class="action-btn edit-btn">Editar</button>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <h3 class="section-title main-title">Ficha Animal</h3>
+        
+        <form class="ficha-form">
+            
+            <div class="input-group left-column">
+                <div class="cow-icon-box">
+                    <img src="cow-avatar.png" alt="Ícone de Vaca" class="cow-avatar"> 
+                </div>
+                
+                <div class="field-row">
+                    <label for="brinco">Número do Brinco:</label>
+                    <input type="text" id="brinco">
+                </div>
+                
+                <div class="field-row">
+                    <label for="rfid">RF ID:</label>
+                    <input type="text" id="rfid">
+                </div>
+
+                <div class="field-row">
+                    <label for="raca">Raça:</label>
+                    <input type="text" id="raca">
+                </div>
+
+                <div class="field-row sex-field">
+                    <label>Sexo:</label>
+                    <input type="checkbox" id="sexo-f">
+                    <label for="sexo-f">F</label>
+                    <input type="checkbox" id="sexo-m">
+                    <label for="sexo-m">M</label>
+                </div>
+
+                <div class="field-row">
+                    <label for="pai">Pai:</label>
+                    <input type="text" id="pai">
+                </div>
+
+                <div class="field-row">
+                    <label for="mae">Mãe:</label>
+                    <input type="text" id="mae">
+                </div>
+            </div>
+
+            <div class="input-group right-column">
+
+                <div class="field-row dual-field">
+                    <label for="data-nasc">Data de Nascimento:</label>
+                    <input type="date" id="data-nasc">
+                    <label for="idade" class="idade-label">Idade:</label>
+                    <input type="text" id="idade">
+                </div>
+                
+                <div class="field-row dual-field">
+                    <label for="n-partos">Nº de partos:</label>
+                    <input type="number" id="n-partos">
+                    <label for="peso" class="peso-label">Peso:</label>
+                    <input type="number" id="peso">
+                </div>
+
+                <div class="field-row dual-field">
+                    <label for="chip">Chip:</label>
+                    <input type="text" id="chip">
+                    <label for="saude" class="saude-label">Saúde:</label>
+                    <input type="text" id="saude">
+                </div>
+
+                <div class="field-row dual-field">
+                    <label for="pelagem">Pelagem:</label>
+                    <input type="text" id="pelagem">
+                    <label for="curral" class="curral-label">Curral:</label>
+                    <input type="text" id="curral">
+                </div>
+                
+                <div class="field-row situacao-field">
+                    <label>Situação:</label>
+                    <input type="checkbox" id="vivo" checked>
+                    <label for="vivo">Vivo</label>
+                    <input type="checkbox" id="morto">
+                    <label for="morto">Morto</label>
+                    <input type="checkbox" id="externo">
+                    <label for="externo">Externo</label>
+                </div>
+                
+                <div class="field-row">
+                    <label for="historico">Histórico de cruzamento:</label>
+                    <input type="text" id="historico">
+                    <button type="button" class="add-btn"><i class="fa-solid fa-plus"></i></button>
+                </div>
+                
+            </div>
+            
+        </form>
+
+        <h3 class="section-title">Genealogia</h3>
+        
+    </main>
+
+    <footer class="bottom-bar">
+        <a href="pagina-cio.html" class="icon-link"><i class="fa-solid fa-house"></i></a>
+        <a href="#" class="icon-link"><i class="fa-solid fa-bell"></i></a>
+        <a href="#" class="icon-link"><i class="fa-solid fa-calculator"></i></a>
+        <a href="#" class="icon-link"><i class="fa-solid fa-file-invoice"></i></a>
+        <a href="dados-fazenda.html" class="icon-link"><i class="fa-solid fa-tractor"></i></a> 
+    </footer>
+
+    <script>
+        document.getElementById('btnExcluir').addEventListener('click', function() {
+            var confirmacao = confirm("ATENÇÃO: Você tem certeza que deseja excluir esta ficha animal?");
+
+            if (confirmacao) {
+                alert("Ficha excluída com sucesso! (Simulação)");
+                window.location.href = 'pagina-cio.html';
+            } else {
+                alert("Exclusão cancelada.");
+            }
+        });
+    </script>
+
+</body>
+</html>

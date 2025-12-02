@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel de Monitoramento</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- TOPO -->
+    <header class="top-bar">
+        <div class="menu-top">
+            <button class="top-btn">Início</button>
+            <button class="top-btn">Contato</button>
+            <button class="top-btn active">Pesquisa</button>
+          <button class="top-btn" onclick="window.location.href='movimentacao.html'">
+    Movimentação
+</button>
+
+        </div>
+
+        <button class="btn-cadastro">Cadastro</button>
+
+    </header>
+
+    <!-- PESQUISA -->
+    <section class="search-section">
+        <input type="text" placeholder="PESQUISAR">
+        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+    </section>
+
+    <!-- CARDS -->
+    <main class="cards-container">
+        <div class="card">
+            <h3>#459217</h3>
+            <p><strong>ID:</strong> 9653</p>
+            <p><strong>Estado:</strong> Saudável</p>
+            <p><strong>Diagnóstico:</strong> Prenha</p>
+            <p><strong>Data de Parto:</strong> 26/04/2025</p>
+            <i class="fa-solid fa-square-full icon-black"></i>
+        </div>
+
+        <div class="card">
+            <h3>#454864</h3>
+            <p><strong>ID:</strong> 5492</p>
+            <p><strong>Estado:</strong> Doente</p>
+            <p><strong>Diagnóstico:</strong> Prenha</p>
+            <p><strong>Previsão de Parto:</strong> 30/07/2025</p>
+            <i class="fa-solid fa-square-full icon-black"></i>
+        </div>
+
+        <div class="card">
+            <h3>#742208</h3>
+            <p><strong>ID:</strong> 1208</p>
+            <p><strong>Estado:</strong> Saudável</p>
+            <p><strong>Diagnóstico:</strong> Prenha</p>
+            <p><strong>Data de Parto:</strong> 10/02/2025</p>
+            <i class="fa-solid fa-square-full icon-black"></i>
+        </div>
+
+        <div class="card">
+            <h3>#454864</h3>
+            <p><strong>ID:</strong> 0932</p>
+            <p><strong>Estado:</strong> Saudável</p>
+            <p><strong>Diagnóstico:</strong> Prenha</p>
+            <p><strong>Previsão de Parto:</strong> 04/06/2025</p>
+            <i class="fa-solid fa-square-full icon-black"></i>
+        </div>
+    </main>
+
+    <!-- MENU INFERIOR -->
+    <footer class="bottom-bar">
+        <button class="icon-btn"><i class="fa-solid fa-house"></i></button>
+        <button class="icon-btn"><i class="fa-solid fa-phone"></i></button>
+        <button class="icon-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+        <button class="icon-btn"><i class="fa-solid fa-cow"></i></button>
+        <button class="icon-btn"><i class="fa-solid fa-tractor"></i></button>
+        <button class="icon-btn" onclick="window.location.href='controlecio.html'">
+    <i class="fa-solid fa-clipboard-list"></i>
+</button>
+
+    </footer>
+
+</body>
+</html>

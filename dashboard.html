@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BoviMetria - Início (Dashboard)</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-green': '#4CAF50', 
+                        'light-green': '#E0F2F1', // Cor de fundo mais clara para o painel
+                        'dark-green-bg': '#557256', // Cor da navbar inferior
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+    <style>
+        /* Estilos globais para a página */
+        body {
+            background-color: #f7f7f7; 
+            /* AJUSTE CRÍTICO: Garante que o conteúdo não seja escondido pelo rodapé fixo */
+            padding-bottom: 70px; 
+        }
+        /* Estilo para as tabs de navegação ativas */
+        .tab.active {
+            border-bottom: 3px solid #4CAF50;
+            color: #4CAF50;
+            font-weight: 600;
+        }
+        /* Estilo para a área principal do dashboard */
+        .dashboard-area {
+            background-color: #f0f0f0; 
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.06);
+        }
+        /* Remove o padding inferior em telas grandes */
+        @media (min-width: 768px) { 
+            body {
+                padding-bottom: 0;
+            }
+        }
+    </style>
+</head>
+<body class="font-sans min-h-screen flex flex-col">
+
+    <header class="bg-white shadow-md">
+        <div class="flex max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 space-x-4 border-b border-gray-200">
+            <nav class="flex space-x-4">
+                <a href="dashboard.html" class="tab active px-3 py-2 text-gray-700 hover:text-primary-green transition duration-150">Início</a>
+                
+                <a href="contato.html" class="tab px-3 py-2 text-gray-500 hover:text-primary-green transition duration-150">Contato</a>
+                
+                <a href="pesquisa.html" class="tab px-3 py-2 text-gray-500 hover:text-primary-green transition duration-150">Pesquisa</a>
+                <a href="movimentacao.html" class="tab px-3 py-2 text-gray-500 hover:text-primary-green transition duration-150">Movimentação</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 w-full">
+        
+        <div class="dashboard-area grid grid-cols-1 md:grid-cols-3 gap-6 p-6 rounded-xl">
+            
+            <div class="md:col-span-1 space-y-4">
+                
+                <div class="p-6 bg-white rounded-lg shadow-md text-center">
+                    <h2 class="text-lg font-medium text-gray-500 uppercase">Total de Gado:</h2>
+                    <p class="text-5xl font-bold text-gray-800 my-4">53</p>
+                    
+                    <i class="fas fa-cow text-8xl text-primary-green/70 my-6"></i>
+                </div>
+
+                <div class="p-6 bg-white rounded-lg shadow-md text-center">
+                    <h2 class="text-lg font-medium text-gray-500 uppercase">Total de Currais:</h2>
+                    <p class="text-5xl font-bold text-gray-800 mt-4">03</p>
+                </div>
+            </div>
+
+            <div class="md:col-span-2 space-y-6">
+                
+                <div class="bg-white p-4 rounded-lg shadow-md">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2 border-b pb-2">Notificações Recentes</h3>
+                    
+                    <div class="mb-3 border-l-4 border-yellow-500 pl-3">
+                        <p class="text-sm font-semibold text-gray-700">Vaca de Leite</p>
+                        <p class="text-xs text-gray-600">A vaca <span class="font-mono text-primary-green">#K54864</span> teve um aumento de <span class="font-bold">2L</span> de leite em sua ordenha.</p>
+                    </div>
+                    
+                    <div class="border-l-4 border-red-500 pl-3">
+                        <p class="text-sm font-semibold text-gray-700">Cio</p>
+                        <p class="text-xs text-gray-600">A vaca <span class="font-mono text-primary-green">#H39021</span> entrou no período de cio.</p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                    
+                    <div class="p-4 bg-primary-green rounded-xl shadow-lg text-white text-center flex flex-col items-center justify-center space-y-1 transform hover:scale-[1.03] transition duration-200">
+                        <i class="fas fa-tractor text-3xl"></i> 
+                        <p class="text-3xl font-bold">47</p>
+                        <p class="text-xs font-light">Animais ativos</p>
+                    </div>
+
+                    <div class="p-4 bg-primary-green rounded-xl shadow-lg text-white text-center flex flex-col items-center justify-center space-y-1 transform hover:scale-[1.03] transition duration-200">
+                        <i class="fas fa-fill-drip text-3xl"></i> 
+                        <p class="text-3xl font-bold">25</p>
+                        <p class="text-xs font-light">Animais em lactação</p>
+                    </div>
+
+                    <div class="p-4 bg-primary-green rounded-xl shadow-lg text-white text-center flex flex-col items-center justify-center space-y-1 transform hover:scale-[1.03] transition duration-200">
+                        <i class="fas fa-baby text-3xl"></i> 
+                        <p class="text-3xl font-bold">03</p>
+                        <p class="text-xs font-light">Partos próximos</p>
+                    </div>
+
+                    <div class="p-4 bg-primary-green/80 rounded-xl shadow-lg text-white text-center flex flex-col items-center justify-center space-y-1 transform hover:scale-[1.03] transition duration-200">
+                        <i class="fas fa-ban text-3xl"></i> 
+                        <p class="text-3xl font-bold">06</p>
+                        <p class="text-xs font-light">Animais não ativos</p>
+                    </div>
+
+                    <div class="p-4 bg-primary-green rounded-xl shadow-lg text-white text-center flex flex-col items-center justify-center space-y-1 transform hover:scale-[1.03] transition duration-200">
+                        <i class="fas fa-briefcase-medical text-3xl"></i> 
+                        <p class="text-3xl font-bold">02</p>
+                        <p class="text-xs font-light">Animais doentes</p>
+                    </div>
+
+                    <div class="p-4 bg-primary-green/90 rounded-xl shadow-lg text-white text-center flex flex-col items-center justify-center space-y-1 transform hover:scale-[1.03] transition duration-200">
+                        <i class="fas fa-seedling text-3xl"></i> 
+                        <p class="text-3xl font-bold">17</p>
+                        <p class="text-xs font-light">Animais em cria</p>
+                    </div>
+                </div>
+                
+                <div class="text-right mt-6">
+                    <span class="text-sm font-bold text-primary-green/70">BoviMetria</span>
+                </div>
+            </div>
+            
+        </div>
+    </main>
+    
+    <footer class="md:hidden fixed bottom-0 left-0 right-0 bg-dark-green-bg shadow-2xl p-3 z-50">
+        <nav class="flex justify-around text-white">
+            <a href="dashboard.html" class="flex flex-col items-center text-xs text-green-300 transition duration-150">
+                <i class="fas fa-home text-xl"></i>
+                <span class="mt-1">Início</span>
+            </a>
+            
+            <a href="notificacoes.html" class="flex flex-col items-center text-xs hover:text-green-300 transition duration-150">
+                <i class="fas fa-bell text-xl"></i>
+                <span class="mt-1">Alertas</span>
+            </a>
+            
+            <a href="relatorios.html" class="flex flex-col items-center text-xs hover:text-green-300 transition duration-150">
+                <i class="fas fa-th-list text-xl"></i>
+                <span class="mt-1">Relatórios</span>
+            </a>
+            <a href="movimentacao.html" class="flex flex-col items-center text-xs hover:text-green-300 transition duration-150">
+                <i class="fas fa-truck-moving text-xl"></i>
+                <span class="mt-1">Mov.</span>
+            </a>
+            <a href="checklist.html" class="flex flex-col items-center text-xs hover:text-green-300 transition duration-150">
+                <i class="fas fa-clipboard-list text-xl"></i>
+                <span class="mt-1">Checklist</span>
+            </a>
+            <a href="metas.html" class="flex flex-col items-center text-xs hover:text-green-300 transition duration-150">
+                <i class="fas fa-bullseye text-xl"></i>
+                <span class="mt-1">Metas</span>
+            </a>
+            <a href="comunicacao.html" class="flex flex-col items-center text-xs hover:text-green-300 transition duration-150">
+                <i class="fas fa-bullhorn text-xl"></i>
+                <span class="mt-1">Comun.</span>
+            </a>
+            <a href="gado.html" class="flex flex-col items-center text-xs hover:text-green-300 transition duration-150">
+                <i class="fas fa-cow text-xl"></i>
+                <span class="mt-1">Gado</span>
+            </a>
+        </nav>
+    </footer>
+
+</body>
+</html>

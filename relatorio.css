@@ -1,0 +1,72 @@
+body {
+    margin: 0;
+    background: #cbd3cb;
+    font-family: Arial, sans-serif;
+}
+
+/* Topo */
+.topo-relatorio {
+    background: #1f4d1a;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    position: relative;
+}
+
+.logo-rel {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    width: 55px;
+}
+
+.conteudo {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.folha {
+    background: white;
+    padding: 25px;
+    width: 90%;
+    max-width: 850px;
+    border-radius: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+table th, table td {
+    border: 1px solid #888;
+    padding: 8px;
+    font-size: 14px;
+}
+
+/* Barra inferior */
+.bottom-bar {
+    background: #1f4d1a;
+    padding: 12px 0;
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+.icon-btn i {
+    font-size: 22px;
+    color: white;
+}
+.icon-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.bottom-bar i {
+    font-size: 20px;
+}

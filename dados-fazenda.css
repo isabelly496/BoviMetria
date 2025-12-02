@@ -1,0 +1,83 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #d6d6d6;
+}
+
+/* Barra superior */
+.top-bar {
+    background: #1f4e1c;
+    padding: 14px;
+    text-align: center;
+    color: white;
+    font-size: 22px;
+    position: relative;
+}
+
+.logo {
+    width: 45px;
+    position: absolute;
+    right: 20px;
+    top: 8px;
+}
+
+/* Conteúdo */
+.container {
+    padding: 40px;
+    display: flex;
+    gap: 40px;
+}
+
+/* Ícone da fazenda */
+.farm-icon {
+    font-size: 140px;
+    color: black;
+    margin-top: 30px;
+}
+
+/* Layout dos inputs */
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 350px);
+    gap: 35px 60px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+}
+
+.form-group.large {
+    grid-column: span 2;
+}
+
+/* Campos de texto */
+input {
+    margin-top: 6px;
+    height: 30px;
+    border: none;
+    border-radius: 10px;
+    background: #cfcfcf;
+    padding-left: 10px;
+}
+
+/* Links estilo sublinhado */
+.link-label {
+    text-decoration: underline;
+    color: #003c80;
+    cursor: pointer;
+}
+
+/* Barra inferior */
+.bottom-bar {
+    width: 100%;
+    background: #1f4e1c;
+    padding: 12px 0;
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    font-size: 26px;
+    position: fixed;
+    bottom: 0;
+}

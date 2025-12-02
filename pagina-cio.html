@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle do Cio</title>
+    <link rel="stylesheet" href="pagina-cio.css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="top-bar">
+        <h2>Controle do Cio</h2>
+        <img src="logo.png" class="logo">
+    </header>
+
+    <main class="container">
+
+        <div class="row">
+
+            <div class="calendar-card">
+                <h3>MAIO</h3>
+
+                <table class="calendar">
+                    <tr>
+                        <th>Dom</th><th>Seg</th><th>Ter</th><th>Qua</th>
+                        <th>Qui</th><th>Sex</th><th>Sab</th>
+                    </tr>
+
+                    <tr><td></td><td></td><td></td><td>1</td><td>2</td><td>3</td><td>4</td></tr>
+                    <tr><td>5</td><td>6</td><td>7</td><td class="selected">8</td><td>9</td><td>10</td><td>11</td></tr>
+                    <tr><td>12</td><td>13</td><td>14</td><td>15</td><td>16</td><td>17</td><td>18</td></tr>
+                    <tr><td>19</td><td>20</td><td>21</td><td>22</td><td>23</td><td class="marked">24</td><td>25</td></tr>
+                    <tr><td>26</td><td>27</td><td class="next">28</td><td>29</td><td>30</td><td>31</td><td></td></tr>
+                </table>
+
+                <h3 class="history-title">Histórico:</h3>
+                <p class="history-text">
+                    - 08/05/2025 - Cio Registrado <br>
+                    - 26/04/2025 - Inseminação <br>
+                    - 10/04/2025 - Cio registrado
+                </p>
+            </div>
+
+            <div class="right-side">
+
+                <div class="info-counter-box">
+
+                    <div class="info-box">
+                        <h3>FICHA DA VACA:</h3>
+                        <p><strong>Vaca:</strong> 8653</p>
+                        <p><strong>Raça:</strong> Holandês</p>
+                        <p><strong>Idade:</strong> 5 anos</p>
+                        <p><strong>Último parto:</strong> 15/02/2024</p>
+                        <p><strong>Status:</strong> Em cio</p>
+                    </div>
+
+                    <div class="counter-box">
+                        <h1>7</h1>
+                        <p class="dias">Dias para</p>
+                        <p class="nextcio">o próximo cio</p>
+                    </div>
+                </div>
+
+                <div class="obs-section">
+                    <h3>Observações:</h3>
+                    <div class="obs-box">
+                        • Observação 1<br>
+                        • Observação 2<br>
+                        • Observação 3<br>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="bottom-bar">
+        <button class="btn"><i class="fa-solid fa-pen"></i> Registrar cio</button>
+        <a href="ficha-cadastral.html" class="btn">
+            <i class="fa-solid fa-book"></i> Registrar
+        </a>
+        <button class="btn"><i class="fa-solid fa-cow"></i> Registrar parto</button>
+        <button class="btn pdf-btn"><i class="fa-solid fa-file-pdf"></i> Exportar PDF</button>
+
+        <div class="icon-menu">
+            <i class="fa-solid fa-house"></i>
+            <i class="fa-solid fa-bell"></i>
+            <i class="fa-solid fa-clipboard-list"></i>
+            <i class="fa-solid fa-cow"></i>
+            <i class="fa-solid fa-tractor"></i>
+        </div>
+    </footer>
+
+</body>
+</html>

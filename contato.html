@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bovimetria – Contato (Chat)</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+    <style>
+        /* [Seu CSS Puro Original] */
+        body {
+            margin: 0;
+            background: #d1d9d1;
+            font-family: Inter, Arial, sans-serif;
+            padding-bottom: 140px; 
+        }
+
+        /* --- Estilos do Cabeçalho de Abas --- */
+        .header-tabs {
+            background: #f5f6e8;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .header-tabs a {
+            text-decoration: none;
+            color: #3a7f3a;
+            padding: 8px 12px;
+            margin-right: 10px;
+            font-weight: 600;
+            border-radius: 4px;
+            transition: background 0.3s;
+        }
+        .header-tabs a:hover {
+            background: #e0e6d6;
+        }
+        .header-tabs a.active {
+            background: #567c46;
+            color: white;
+        }
+        .header-tabs img {
+            width: 40px;
+            margin-left: auto;
+        }
+        /* --- Estilos da Área de Chat (Conversa) --- */
+        .chat-container {
+            width: 96%;
+            margin: 20px auto;
+            max-width: 800px;
+        }
+        .message-box {
+            display: flex;
+            margin-bottom: 15px;
+        }
+        .message-box.received {
+            justify-content: flex-start;
+        }
+        .message-box.sent {
+            justify-content: flex-end;
+        }
+        .message-content {
+            padding: 10px 15px;
+            border-radius: 18px;
+            max-width: 75%;
+            font-size: 15px;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+        .message-box.received .message-content {
+            background: white;
+            color: #333;
+        }
+        .message-box.sent .message-content {
+            background: #d7f7c7; 
+            color: #333;
+        }
+
+        /* --- Estilos da Caixa de Entrada --- */
+        .input-bar {
+            height: 70px;
+            background: white;
+            border-top: 1px solid #ccc;
+            display: flex;
+            align-items: center;
+            position: fixed;
+            bottom: 70px; 
+            width: 100%;
+            padding: 0 10px;
+            box-sizing: border-box;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.05);
+            z-index: 20;
+        }
+        .input-bar input {
+            flex-grow: 1;
+            border: none;
+            padding: 10px 15px;
+            font-size: 16px;
+            outline: none;
+        }
+        .input-bar button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+        }
+        .input-bar .icon-button {
+            font-size: 20px;
+            color: #555;
+            transition: color 0.2s;
+        }
+        .input-bar .send-button {
+            background: #567c46; 
+            color: white;
+            border-radius: 50%;
+            height: 40px;
+            width: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 10px;
+        }
+        /* --- Estilos da Barra Inferior --- */
+        .bottombar{
+            height:70px;
+            background:#123a12;
+            display:flex;
+            justify-content:space-around;
+            align-items:center;
+            position:fixed;
+            bottom:0;
+            width:100%;
+            z-index: 30; 
+        }
+        /* Estilo para os links/ícones na barra inferior */
+        .bottombar a {
+            text-decoration: none; 
+            display: flex; 
+            align-items: center;
+            font-size: 24px; /* Tamanho dos ícones Font Awesome */
+            color: white;
+            opacity: 0.8;
+            transition: opacity 0.2s;
+        }
+        .bottombar a:hover {
+            opacity: 1;
+        }
+
+    </style>
+</head>
+<body>
+
+<header class="header-tabs">
+    <a href="dashboard.html">Início</a>
+    <a href="contato.html" class="active">Contato</a>
+    <a href="pesquisa.html">Pesquisa</a>
+    <a href="movimentacao.html">Movimentação</a>
+    <img src="logo.png" alt="Logo BoviMetria">
+</header>
+
+<div class="chat-container" id="chatContainer">
+
+    <div class="message-box received">
+        <div class="message-content">
+            <i class="fas fa-robot" style="margin-right: 5px; color: #567c46;"></i> Boa Tarde, qual seria a dúvida?
+        </div>
+    </div>
+    
+    <div class="message-box sent">
+        <div class="message-content">
+            Olá, tenho dúvidas.
+        </div>
+    </div>
+    
+    <div style="text-align: center; margin: 30px 0; color: #777;">
+        <i class="fas fa-circle-notch fa-spin"></i>
+    </div>
+    
+</div>
+
+<div class="input-bar">
+    <button class="icon-button">
+        <i class="fas fa-paperclip"></i> </button>
+    <input type="text" id="messageInput" placeholder="MENSAGEM....">
+    <button class="send-button" onclick="sendMessage()">
+        <i class="fas fa-paper-plane"></i> </button>
+</div>
+
+<div class="bottombar">
+    <a href="dashboard.html">
+        <i class="fas fa-home"></i>
+    </a>
+    
+    <a href="notificações.html">
+        <i class="fas fa-bell"></i> 
+    </a>
+    
+    <a href="calculadora.html">
+        <i class="fas fa-calculator"></i> 
+    </a>
+    
+    <a href="settings.html">
+        <i class="fas fa-edit"></i> 
+    </a>
+</div>
+
+<script>
+    function sendMessage() {
+        const input = document.getElementById('messageInput');
+        const messageText = input.value.trim();
+        const chatContainer = document.getElementById('chatContainer');
+
+        if (messageText === "") {
+            return; // Não envia mensagem vazia
+        }
+
+        // 1. Cria o novo balão de mensagem enviada
+        const newMessage = document.createElement('div');
+        newMessage.className = 'message-box sent';
+        newMessage.innerHTML = `
+            <div class="message-content">
+                ${messageText}
+            </div>
+        `;
+        
+        // 2. Adiciona a mensagem ao container
+        chatContainer.appendChild(newMessage);
+
+        // 3. Limpa o input
+        input.value = '';
+
+        // 4. Rola para a mensagem mais recente
+        chatContainer.scrollTop = chatContainer.scrollHeight;
+    }
+    
+    // Opcional: Permite enviar a mensagem apertando Enter
+    document.getElementById('messageInput').addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') {
+            sendMessage();
+        }
+    });
+</script>
+
+</body>
+</html>
